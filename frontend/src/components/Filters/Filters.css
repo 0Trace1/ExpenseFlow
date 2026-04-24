@@ -1,6 +1,6 @@
 .filters {
   display: flex;
-  gap: 10px;
+  justify-content: space-between;
   margin-bottom: 20px;
 }
 
@@ -9,10 +9,4 @@
   padding: 8px;
   border-radius: 6px;
   border: 1px solid #ddd;
-}
-
-.filters input:focus,
-.filters select:focus {
-  outline: none;
-  border-color: #4caf50;
 }

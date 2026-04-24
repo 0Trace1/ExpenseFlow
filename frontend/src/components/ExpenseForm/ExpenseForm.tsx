@@ -40,30 +40,34 @@ const ExpenseForm = ({ onSuccess }) => {
 
   return (
     <form className="form" onSubmit={handleSubmit}>
-      <input
-        placeholder="Amount"
-        value={form.amount}
-        onChange={(e) => setForm({ ...form, amount: e.target.value })}
-      />
-      <input
-        placeholder="Category"
-        value={form.category}
-        onChange={(e) => setForm({ ...form, category: e.target.value })}
-      />
-      <input
-        placeholder="Description"
-        value={form.description}
-        onChange={(e) => setForm({ ...form, description: e.target.value })}
-      />
-      <input
-        type="date"
-        value={form.date}
-        onChange={(e) => setForm({ ...form, date: e.target.value })}
-      />
+      <div className="form-row">
+        <input
+          placeholder="Amount"
+          value={form.amount}
+          onChange={(e) => setForm({ ...form, amount: e.target.value })}
+        />
+        <input
+          placeholder="Category"
+          value={form.category}
+          onChange={(e) => setForm({ ...form, category: e.target.value })}
+        />
+        <input
+          placeholder="Description"
+          value={form.description}
+          onChange={(e) => setForm({ ...form, description: e.target.value })}
+        />
+        <input
+          type="date"
+          value={form.date}
+          onChange={(e) => setForm({ ...form, date: e.target.value })}
+        />
+      </div>
 
-      <button disabled={loading}>
-        {loading ? "Adding..." : "Add Expense"}
-      </button>
+      <div className="form-button-div">
+        <button disabled={loading}>
+          {loading ? "Adding..." : "Add Expense"}
+        </button>
+      </div>
     </form>
   );
 };

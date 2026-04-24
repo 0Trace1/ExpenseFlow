@@ -1,8 +1,8 @@
 .form {
-  background: white;
+  background: #fff;
   padding: 16px;
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
   margin-bottom: 20px;
 }
 
@@ -14,28 +14,27 @@
 
 .form input {
   flex: 1;
+  min-width: 120px;
   padding: 10px;
-  border: 1px solid #ddd;
   border-radius: 6px;
-  font-size: 14px;
-}
-
-.form input:focus {
-  outline: none;
-  border-color: #4caf50;
+  border: 1px solid #ddd;
 }
 
 .form button {
-  margin-top: 10px;
   padding: 10px 16px;
-  background: #4caf50;
+  background: #2e7d32;
   color: white;
   border: none;
   border-radius: 6px;
   cursor: pointer;
+  margin-top: 10px;
 }
 
-.form button:disabled {
-  background: #aaa;
-  cursor: not-allowed;
+.form button:hover {
+  background: #1b5e20;
+}
+
+.form-button-div {
+  display: flex;
+  justify-content: center;
 }

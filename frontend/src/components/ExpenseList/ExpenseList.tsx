@@ -5,15 +5,28 @@ const ExpenseList = ({ expenses }) => {
 
   return (
     <div className="list">
-      <h3>Total: ₹{total}</h3>
+      <div className="total">Total: ₹{total}</div>
 
-      <ul>
-        {expenses.map((e) => (
-          <li key={e.id}>
-            {e.category} - ₹{e.amount} - {e.date}
-          </li>
-        ))}
-      </ul>
+      <table>
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Description</th>
+            <th>Date</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          {expenses.map((e) => (
+            <tr key={e.id}>
+              <td>{e.category}</td>
+              <td>{e.description}</td>
+              <td>{new Date(e.date).toLocaleDateString()}</td>
+              <td>₹{e.amount}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };
