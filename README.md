@@ -232,10 +232,10 @@ DB_NAME=expenseflow
 
 ## 🚀 Live Demo
 
-(Add deployed link here if available)
+https://vercel.com/vignesh-bss-projects/expense-flow
 
 ---
 
 ## 👤 Author
 
-Manish BS
+Vignesh BS
