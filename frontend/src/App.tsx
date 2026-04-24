@@ -6,8 +6,11 @@ import Filters from "./components/Filters/Filters";
 import Spinner from "./components/Spinner/Spinner";
 import type { Expense } from "./interfaces/expense";
 import "./App.css";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
+  <ToastContainer position="top-right" />;
   const [expenses, setExpenses] = useState<Expense[]>([]);
   const [category, setCategory] = useState("");
   const [sort, setSort] = useState("date_desc");
@@ -53,7 +56,10 @@ function App() {
       <ExpenseForm onSuccess={fetchData} />
 
       <Filters setCategory={setCategory} setSort={setSort} />
+
       {loading ? <Spinner /> : <ExpenseList expenses={expenses} />}
+
+      <ToastContainer position="top-right" autoClose={3000} theme="colored" />
     </div>
   );
 }
