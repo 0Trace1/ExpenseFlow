@@ -1,0 +1,18 @@
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filters input,
+.filters select {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.filters input:focus,
+.filters select:focus {
+  outline: none;
+  border-color: #4caf50;
+}
